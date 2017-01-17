@@ -1,0 +1,13 @@
+Off button
+Top color: 458cff
+Bottom color: 2e45b8
+Border: 758ac9
+Size: 3
+Buble effect: true
+
+On button
+Color: 548bde
+Border: 4269de
+Size: 3
+Buble effect: false
+

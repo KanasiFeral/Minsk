@@ -1,0 +1,302 @@
+<!DOCTYPE html>  
+	<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Минск карта</TITLE>
+		<LINK REL="stylesheet" HREF="style_main.css" TYPE="text/css">
+        <link rel="stylesheet" media="screen,projection" href="Scripts/css/ui.totop.css" />
+	    <style type="text/css">
+            html 
+            {
+                background: url(Images/Backgrounds/WYXBr_7u2_c.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                height: auto;
+                width: auto;
+                cursor: url(Cursors/cb_arrow.cur), pointer;
+            }
+            #main /*Блок с основным контентом*/
+			{   
+                position: relative;
+                margin: 0 auto;
+                width: 80%;
+                background-color: #EEEBE8; 
+                min-width: 800px;
+                max-width: 1200px;               
+			}
+            #header /*Шапка сайта*/
+            {
+                position: relative;                
+                /*margin-bottom: 20px;*/
+                margin-top: 0px;                
+                height: 250px;
+                /*background: grey;*/
+                background-image: url(Images/Backgrounds/minsk-svisloch-panorama.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            #footer /*Подвал сайта*/
+            {
+                position: relative;
+                margin-top: 20px;
+                margin-bottom: 0px;                
+                height: 200px;
+                /*background: #4A4E54;*/
+                background-image: url(Images/Backgrounds/Footer_Finish.jpg);
+                background-repeat: repeat-y;
+                background-size: 100% 100%; 
+            }
+            #menu
+            {
+                padding: 2px;
+                position: relative;
+                height:50px;
+                background-color: #DAD4CD;
+                margin-bottom: 20px;
+            }
+            .menu_m
+            {
+                /*text-align: top;*/
+                margin: 1px;
+                position: relative;
+                display: inline-block; 
+                width: 24%;
+                height: 90%; 
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .menu_m:hover
+            {
+                background-size: 100% 100%;
+                background-repeat: no-repeat;                
+                cursor: url(Cursors/bf3_linkselect2.cur), pointer;
+                /*transition: box-shadow 0.5s;
+		        box-shadow: 0 0 15px #0E2A9A;*/                
+            }
+            #maps
+            {
+                background-image: url(Buttons/KartsOff.png);
+            }
+            #maps:hover
+            {
+                background-image: url(Buttons/KartsOn.png);                
+            }
+            #geog
+            {
+                background-image: url(Buttons/GeogOff.png);
+            }
+            #geog:hover
+            {
+                background-image: url(Buttons/GeogOn.png);                
+            }
+            #glav
+            {
+                background-image: url(Buttons/GlavOff.png);
+            }
+            #glav:hover
+            {
+                background-image: url(Buttons/GlavOn.png);                
+            }
+            #obrat
+            {
+                background-image: url(Buttons/ObratOff.png);
+            }
+            #obrat:hover
+            {
+                background-image: url(Buttons/ObratOn.png);                
+            }
+            .main_m /*Блок с названием*/
+            {
+                width: 100%;
+                height: 50px;
+                background-color: grey;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .main_text
+            {
+                font-size: 30px;            
+            }
+            .text_m /*Оформление всего сайта*/
+            {
+                padding-left: 2%;
+                padding-right: 2%;
+                font-size: 18px;
+                text-align: justify;
+            }
+            .left_inf /*Блок с информацией*/
+            {        
+                margin: 1px;
+                margin-left: 2%;                
+                position: relative;
+                display: inline-block;
+                width: 65%;
+                height: 100%;
+                background-color:white; 
+                -moz-box-shadow: 1px 1px 1px 1px #444;
+                -webkit-box-shadow: 1px 1px 1px 1px #444;
+                -o-box-shadow: 1px 1px 1px 1px #444;
+                box-shadow: 1px 1px 1px 1px #444;
+            }
+            .right_inf /*Блок с дополнительной информацией*/
+            {      
+                /*background-color: green;*/
+                vertical-align: top;
+                width: 30%;
+                position: relative;
+                display: inline-block;                
+                height: 100%;                
+            }            
+            .img_s
+            {
+                margin: 2%;
+                width: 90%;   
+                height: 300px;
+            }
+            #content #gallery1 
+            {
+                position: absolute;
+                -moz-user-select: none;
+                user-select: none;
+                margin: 100px auto 0;
+                text-align: center;	/*width: 800px;*/
+            }
+            #gallery1 a 
+            {
+                display: inline-block;
+                height: 135px;
+                position: relative;
+                width: 180px;
+                margin: 5px;
+                /* CSS3 Prevent selections 
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                user-select: none;*/
+            }
+            #gallery1 a img 
+            {
+                border: 8px solid #fff;
+                border-bottom: 20px solid #fff;
+                cursor: default;
+                display: block;
+                height: 100%;
+                left: 0px;
+                position: absolute;
+
+                top: 0px;
+                width: 100%;
+                z-index: 1;
+
+                /* -moz-transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);*/
+
+                /* CSS3 Box sizing property - оформление боксами, пустое пространство между картинками*/
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+
+                /* CSS3 transition rules - возрват в изначалтьное состояние*/
+                -webkit-transition: all 1.0s ease;
+                -moz-transition: all 1.0s ease;
+                -o-transition: all 1.0s ease;
+                transition: all 1.0s ease;
+
+                /* CSS3 Box Shadow - Тень от боксов*/
+                -moz-box-shadow: 2px 2px 4px #444;
+                -webkit-box-shadow: 2px 2px 4px #444;
+                -o-box-shadow: 2px 2px 4px #444;
+                box-shadow: 2px 2px 4px #444;
+                cursor: zoom-in;
+            }
+
+            #gallery1 img:nth-child(4n-2) {left: 37.5%;}
+            #gallery1 img:nth-child(4n-1) {left: 62.5%;}
+            #gallery1 img:nth-child(4n) {left: 87.5%;}
+            #gallery1 img:nth-child(n+5) {top: 75%;}
+
+            #gallery1 a img:focus 
+            {
+                cursor: default;
+                height: 250%;
+                left: -150px;
+                top: -100px;
+                position: absolute;
+                width: 250%;
+                z-index: 25;
+                pointer-events: none;	
+                 -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+
+                /* CSS3 Box sizing property */
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+
+                /* CSS3 transition rules */
+                -webkit-transition: all 2.0s ease;
+                -moz-transition: all 2.0s ease;
+                -o-transition: all 2.0s ease;
+                transition: all 2.0s ease;
+
+                /* CSS3 Box Shadow */
+                -moz-box-shadow: 2px 2px 4px #444;
+                -webkit-box-shadow: 2px 2px 4px #444;
+                -o-box-shadow: 2px 2px 4px #444;
+                box-shadow: 2px 2px 4px #444;
+            }
+        </style>
+	</HEAD>  
+		<BODY>
+		
+            <div id="main">
+                <div id="header"></div> 
+                <div id="menu" align="center">
+                    <div class="menu_m" id="glav" onClick="window.open('Index.html', '_self','')">
+                        <!-- <p class="menu_text">Главная</p> -->
+                    </div>
+                    <div class="menu_m" id="maps" onClick="window.open('MapMinsk.html', '_self','')">
+                        <!-- <p class="menu_text">Карта Минска</p> -->
+                    </div>
+                    <div class="menu_m" id="geog" onClick="window.open('MapBelarus.html', '_self','')">
+                        <!-- <p class="menu_text">Географическое расположение</p> -->               
+                    </div>
+                    <div class="menu_m" id="obrat" onClick="window.open('Feedback.html', '_self','')">
+                        <!-- <p class="menu_text">Обратная связь</p> --> 
+                    </div>                               
+                </div>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d75225.91375083986!2d27.55268135978399!3d53.89958439472619!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1416030692437" width="100%" height="600" frameborder="0" style="border:0">Ваш браузер не поддерживает плавающие фреймы!Или отсутствует соединение интернет!</iframe>    
+                <div id="footer"></div>
+            </div>
+            
+        <!-- jquery -->
+        <script src="Scripts/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+            <!-- easing plugin ( optional ) -->
+            <script src="Scripts/js/easing.js" type="text/javascript"></script>
+            <!-- UItoTop plugin -->
+            <script src="Scripts/js/jquery.ui.totop.js" type="text/javascript"></script>
+            <!-- Starting the plugin -->
+            <script type="text/javascript">
+            $(document).ready(function() {
+            /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+            });
+        </script>
+                        
+		</BODY>  <!-- Конец тела -->
+</HTML> 

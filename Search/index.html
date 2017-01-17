@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+	<HTML> 
+	<HEAD>
+		<META charset="utf-8">
+		<TITLE>Пример страницы</TITLE>
+		<LINK REL="stylesheet" HREF="style_main.css" TYPE="text/css">
+	
+        <script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+  
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+   
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+   
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+ 
+   
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ } 
+</script>
+            
+	</HEAD>  
+		<BODY>
+		
+            <h2>JavaScript поиск по странице</h2>
+<input type="text" id="text-to-find" value=""> 
+<input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Искать"/>
+<br/><i>Введите слово или фразу для поиска.</i>
+<hr/>
+ 
+<table border='2' cellpadding='20'>
+ 
+00:25:8E WeatherC The Weather Channel<br>
+00:25:8F TridentM Trident Microsystems, Inc.<br>
+00:25:90 SuperMic Super Micro Computer, Inc.<br>
+00:25:91 Nextek NEXTEK, Inc.<br>
+00:25:92 Guangzho Guangzhou Shirui Electronic Co., Ltd<br>
+00:25:93 DatnetIn DatNet Informatikai Kft.<br>
+00:25:94 Eurodesi Eurodesign BG LTD<br>
+00:25:95 Northwes Northwest Signal Supply, Inc<br>
+00:25:96 Gigavisi GIGAVISION srl<br>
+00:25:97 KalkiCom Kalki Communication Technologies<br>
+00:25:98 ZhongSha Zhong Shan City Litai Electronic Industrial Co. Ltd<br>
+00:25:99 HedonEDB Hedon e.d. B.V.<br>
+00:25:9A Cestroni CEStronics GmbH<br>
+00:25:9B BeijingP Beijing PKUNITY Microsystems Technology Co., Ltd<br>
+00:25:9C Cisco-Li Cisco-Linksys, LLC<br>
+00:25:9D Private<br>
+00:25:9E HuaweiTe Huawei Technologies Co., Ltd.<br>
+00:25:9F Technodi TechnoDigital Technologies GmbH<br>
+00:25:A0 Nintendo Nintendo Co., Ltd.<br>
+00:25:A1 Enalasys<br>
+00:25:A2 AltaDefi Alta Definicion LINCEO S.L.<br>
+00:25:A3 TrimaxWi Trimax Wireless, Inc.<br>
+00:25:A4 Eurodesi EuroDesign embedded technologies GmbH<br>
+00:25:A5 WalnutMe Walnut Media Network<br>
+00:25:A6 CentralN Central Network Solution Co., Ltd.<br>
+00:25:A7 Comverge Comverge, Inc
+  
+  
+</table>
+            
+		</BODY>  <!-- Конец тела -->
+</HTML> 
